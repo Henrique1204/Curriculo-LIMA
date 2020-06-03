@@ -1,0 +1,137 @@
+@import '_reset';
+@import '_variaveis';
+@import '_grid';
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: $cor-suporte;
+    background-color: $cor-base;
+}
+
+header {
+    margin-top: $entre-sessoes!important;
+    font-size: 24px;
+
+    div:first-child {
+        @include grid(3);
+        border-radius: 50%;
+        border: 10px solid $cor-secundaria;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    h1 {
+        margin-top: $entre-conteudo;
+        margin-bottom: $entre-texto;
+        @include grid(9);
+        font-size: 32px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+
+main {
+    @include sessao;
+    font-size: 18px;
+    text-align: center;
+
+    h1 {
+        @include grid(9);
+        margin-bottom: $entre-texto;
+        font-size: 24px;
+    }
+}
+
+.projetos {
+    @include sessao;
+
+    h1 {
+        @include grid(9);
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    .projeto {
+        @include grid(8);
+        padding: $entre-conteudo;
+        border-radius: 4px;
+        margin-top: $entre-conteudo;
+        background-color: $cor-secundaria;
+        @include sombra(inset 4px 4px 4px rgba(0, 0, 0, 0.5));
+
+        a {
+            @include btn;
+        }
+
+        p {
+            @include grid(6);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+}
+
+.cursos {
+    @include sessao;
+
+    h1 {
+        @include grid(9);
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    ul {
+        @include grid(9);
+        padding: 15px $entre-conteudo;
+        border-radius: 4px;
+        margin-top: $entre-conteudo;
+        background-color: $cor-secundaria;
+        @include sombra(inset 4px 4px 4px rgba(0, 0, 0, 0.5));
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li {
+        margin: 15px 10px;
+    }
+
+    a {
+        padding: 0 5px;
+        font-size: 16px;
+        text-decoration: none;
+        color: $cor-suporte;
+
+        &:hover {
+            color: $cor-base;
+        }
+    }
+}
+
+footer {
+    @include sessao;
+
+    a {
+        margin-left: $entre-conteudo;
+        text-decoration: none;
+        color: $cor-suporte;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            color: $cor-secundaria;
+        }
+    }
+}

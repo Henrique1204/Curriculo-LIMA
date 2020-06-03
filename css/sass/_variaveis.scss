@@ -1,0 +1,44 @@
+// Cores
+$cor-base: #091B26;
+$cor-primaria: #254B59;
+$cor-secundaria: #54828C;
+$cor-suporte: #F0F2F0;
+
+// Distancias
+$entre-sessoes: 60px;
+$entre-conteudo: 30px;
+$entre-texto: 15px;
+
+// Mixin sombra
+@mixin sombra($sombra...) {
+    -webkit-box-shadow: $sombra;
+    -moz-box-shadow: $sombra;
+    box-shadow: $sombra;
+}
+
+// Mixin sessão
+@mixin sessao {
+    padding: $entre-conteudo;
+    border-radius: 4px;
+    margin-top: $entre-sessoes!important;
+    background-color: $cor-primaria;
+    @include sombra(4px 4px 5px rgba(0, 0, 0, 0.5));
+}
+
+// Mixin botões
+@mixin btn {
+    width: 200px;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    color: $cor-base;
+    background-color: #C9EEF2;
+    transition: 0.3s;
+
+    &:hover {
+        color: #C9EEF2;
+        background-color: $cor-base;
+    }
+}
