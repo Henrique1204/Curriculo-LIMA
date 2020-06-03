@@ -1,5 +1,5 @@
 @import '_reset';
-@import '_variaveis';
+@import '_variaveis-e-mixins';
 @import '_grid';
 
 body {
@@ -33,6 +33,15 @@ header {
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 2px;
+
+        @include responsividade() {
+            font-size: 18px;
+            letter-spacing: initial;
+        }
+    }
+
+    @include responsividade() {
+        font-size: 16px;
     }
 }
 
@@ -45,6 +54,15 @@ main {
         @include grid(9);
         margin-bottom: $entre-texto;
         font-size: 24px;
+
+        @include responsividade() {
+            font-size: 18px;
+        }
+    }
+
+    @include responsividade() {
+        font-size: 16px;
+        line-height: 1.5;
     }
 }
 
@@ -73,6 +91,23 @@ main {
             @include grid(6);
             font-size: 16px;
             line-height: 1.5;
+
+            @include responsividade(media) {
+                @include grid(8);
+                margin-top: 30px;
+                text-align: center;
+            }
+        }
+
+        @include responsividade() {
+            padding: 15px;
+        }
+    }
+
+    .linha {
+        @include responsividade(media) {
+            flex-direction: column;
+            justify-content: center;
         }
     }
 }
@@ -97,6 +132,17 @@ main {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+
+        @include responsividade(media) {
+            height: 250px;
+            flex-direction: column;
+        }
+
+        @include responsividade() {
+            height: auto;
+            padding: 15px;
+            justify-content: center;
+        }
     }
 
     li {
@@ -132,6 +178,17 @@ footer {
 
         &:hover {
             color: $cor-secundaria;
+        }
+
+        @include responsividade() {
+            margin-left: 0;
+            margin-top: 15px;
+        }
+    }
+
+    div {
+        @include responsividade() {
+            flex-direction: column;
         }
     }
 }

@@ -41,4 +41,10 @@ $entre-texto: 15px;
         color: #C9EEF2;
         background-color: $cor-base;
     }
+
+    @include responsividade() {
+        width: 160px;
+        padding: 10px 10px;
+        font-size: 16px;
+    }
 }

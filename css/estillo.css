@@ -59,7 +59,7 @@ table {
 }
 
 .container {
-  width: 870px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -68,15 +68,15 @@ table {
   position: relative;
 }
 
-@media screen and (min-width: 481px) and (max-width: 880px) {
+@media screen and (max-width: 930px) {
   .container {
-    width: 880px;
+    max-width: 600px;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 630px) {
   .container {
-    width: 480px;
+    max-width: 300px;
   }
 }
 
@@ -112,7 +112,7 @@ header div:first-child {
   border: 10px solid #54828C;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 630px) {
   header div:first-child {
     width: 100%;
     margin-left: 0;
@@ -138,11 +138,24 @@ header h1 {
   letter-spacing: 2px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 630px) {
   header h1 {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  header h1 {
+    font-size: 18px;
+    letter-spacing: initial;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  header {
+    font-size: 16px;
   }
 }
 
@@ -167,11 +180,24 @@ main h1 {
   font-size: 24px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 630px) {
   main h1 {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  main h1 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  main {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }
 
@@ -194,7 +220,7 @@ main h1 {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 630px) {
   .projetos h1 {
     width: 100%;
     margin-left: 0;
@@ -216,7 +242,7 @@ main h1 {
   box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 630px) {
   .projetos .projeto {
     width: 100%;
     margin-left: 0;
@@ -241,6 +267,14 @@ main h1 {
   background-color: #091B26;
 }
 
+@media screen and (max-width: 630px) {
+  .projetos .projeto a {
+    width: 160px;
+    padding: 10px 10px;
+    font-size: 16px;
+  }
+}
+
 .projetos .projeto p {
   width: calc(66.66667% - 30px);
   min-height: 1px;
@@ -250,11 +284,43 @@ main h1 {
   line-height: 1.5;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 630px) {
   .projetos .projeto p {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .projetos .projeto p {
+    width: calc(88.88889% - 30px);
+    min-height: 1px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 930px) and (max-width: 630px) {
+  .projetos .projeto p {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .projetos .projeto {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .projetos .linha {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -277,7 +343,7 @@ main h1 {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 630px) {
   .cursos h1 {
     width: 100%;
     margin-left: 0;
@@ -303,11 +369,26 @@ main h1 {
   justify-content: center;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 630px) {
   .cursos ul {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .cursos ul {
+    height: 250px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .cursos ul {
+    height: auto;
+    padding: 15px;
+    justify-content: center;
   }
 }
 
@@ -351,4 +432,17 @@ footer a img {
 
 footer a:hover {
   color: #54828C;
+}
+
+@media screen and (max-width: 630px) {
+  footer a {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  footer div {
+    flex-direction: column;
+  }
 }

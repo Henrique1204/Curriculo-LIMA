@@ -1,9 +1,9 @@
 // Variáveis do Grid
 $colunas: 9;
 $gutter: 30px;
-$tela-grande: 870px;
-$tela-media: 880px;
-$tela-pequena: 480px;
+$tela-grande: 900px;
+$tela-media: 600px;
+$tela-pequena: 300px;
 
 // Adicionar box sizing
 *, *::after, *::before {
@@ -16,13 +16,13 @@ $tela-pequena: 480px;
 @mixin responsividade($tamanho: false) {
     @if ($tamanho == media)
     {
-        @media screen and (min-width: $tela-pequena + 1) and (max-width: $tela-media) {
+        @media screen and (max-width: $tela-grande + 30) {
             @content;
         }
     }
     @else
     {
-        @media screen and (max-width: $tela-pequena) {
+        @media screen and (max-width: $tela-media + 30) {
             @content;
         } 
     }
@@ -30,7 +30,7 @@ $tela-pequena: 480px;
 
 // Mixin container
 .container {
-    width: $tela-grande;
+    max-width: $tela-grande;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -39,11 +39,11 @@ $tela-pequena: 480px;
     position: relative;
 
     @include responsividade(media) {
-        width: $tela-media;
+        max-width: 600px;
     }
 
     @include responsividade() {
-        width: $tela-pequena;
+        max-width: $tela-pequena;
     }
 }
 
